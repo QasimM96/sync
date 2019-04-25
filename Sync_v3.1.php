@@ -234,10 +234,12 @@ class Sync{
 
     /* this function is used to import from outside  */
 
-    function importFromOutside()
+    function importFromOutside($data)
     {
 
-        if(!empty($_POST['return'])){
+        $sql = $data;
+        
+        if(!empty($sql)){
 
             $sql = explode(';', $_POST['return']);
 
